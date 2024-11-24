@@ -1,0 +1,24 @@
+{
+  "name": "convert-web-page-to-app",
+  "version": "1.0.0",
+  "description": "An app made with Rust and Tauri to convert an existing web page into a native Windows app",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "tauri": "tauri"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.5.0",
+    "@tauri-apps/api": "^1.5.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "vite": "^4.4.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
