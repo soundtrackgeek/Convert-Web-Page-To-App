@@ -37,6 +37,11 @@ async fn convert_webpage(
         .await
         .map_err(|e| e.to_string())?;
     
+    // Extract domain for window title
+    let domain = url.domain()
+        .unwrap_or("Unknown")
+        .to_string();
+    
     // Create a new window with the webpage
     let label = format!("web-window-{}", window.label());
     let web_window = WindowBuilder::new(
@@ -44,10 +49,23 @@ async fn convert_webpage(
         label,
         WindowUrl::External(url)
     )
-    .title(format!("Converted App - {}", request.url))
-    .inner_size(800.0, 600.0)
+    .title(domain)
+    .inner_size(1024.0, 768.0)
+    .center()
+    .decorations(true)
+    .always_on_top(false)
+    .resizable(true)
+    .fullscreen(false)
+    .transparent(false)
     .build()
     .map_err(|e| e.to_string())?;
+    
+    // Configure the window to look more native
+    web_window.set_decorations(true)
+        .map_err(|e| e.to_string())?;
+    
+    web_window.show()
+        .map_err(|e| e.to_string())?;
     
     Ok("Webpage converted to app successfully".to_string())
 }

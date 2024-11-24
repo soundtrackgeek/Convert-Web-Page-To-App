@@ -17,7 +17,7 @@ tauri-build = { version = "1.5.0", features = [] }
 [dependencies]
 serde_json = "1.0"
 serde = { version = "1.0", features = ["derive"] }
-tauri = { version = "1.5.0", features = ["shell-open"] }
+tauri = { version = "1.5.0", features = [ "window-start-dragging", "window-hide", "shell-open", "window-show", "window-maximize", "window-minimize", "window-unminimize", "window-close"] }
 reqwest = { version = "0.11", features = ["json"] }
 tokio = { version = "1.0", features = ["full"] }
 url = "2.4"

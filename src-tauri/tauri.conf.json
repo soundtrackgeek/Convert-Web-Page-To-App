@@ -15,6 +15,16 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "minimize": true,
+        "unminimize": true,
+        "startDragging": true
       }
     },
     "bundle": {
@@ -32,7 +42,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.webpage-converter.dev",
+      "identifier": "com.webpage-to-app.dev",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -47,7 +57,10 @@
       "windows": {
         "certificateThumbprint": null,
         "digestAlgorithm": "sha256",
-        "timestampUrl": ""
+        "timestampUrl": "",
+        "webviewInstallMode": {
+          "type": "downloadBootstrapper"
+        }
       }
     },
     "security": {
@@ -62,7 +75,10 @@
         "height": 600,
         "resizable": true,
         "title": "Webpage to App Converter",
-        "width": 800
+        "width": 800,
+        "decorations": true,
+        "transparent": false,
+        "center": true
       }
     ]
   }
